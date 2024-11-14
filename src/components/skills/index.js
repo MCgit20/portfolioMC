@@ -7,6 +7,7 @@ import reseau from '../image/cisco.png'
 import systeme from '../image/linux_PNG40.png'
 import system from '../image/macos.png'
 import VM from '../image/virtualbox_logo_icon.png'
+import système from '../image/windows.png'
 
 function Skills () {
     return (
@@ -21,7 +22,7 @@ function Skills () {
                     <div className="bartext">
                         <h2>Front-end</h2>
                         <br></br>
-                        <p>HTML  CSS  Javascript  React</p>
+                        <p>HTML&nbsp;&nbsp;CSS&nbsp;&nbsp;Javascript&nbsp;&nbsp;React</p>
                     </div>
                 </div>
                 <div className="skillbar">
@@ -30,7 +31,7 @@ function Skills () {
                     <div className="bartext">
                         <h2>Back-end</h2>
                         <br></br>
-                        <p>Python   PHP</p>
+                        <p>Python&nbsp;&nbsp;PHP</p>
                     </div>
                 </div>
                 <div className="skillbar">
@@ -44,10 +45,11 @@ function Skills () {
                 <div className="skillbar">
                     <img src={systeme} alt="systeme" className="barimg"/>
                     <img src={system} alt="systeme" className="barimg"/>
+                    <img src={système} alt="système" className="barimg"/>
                     <div className="bartext">
                         <h2>Système d'exploitation</h2>
                         <br></br>
-                        <p>Linux  MacOS</p>
+                        <p>Linux&nbsp;&nbsp;MacOS&nbsp;&nbsp;Windows</p>
                     </div>
                 </div>
                 <div className="skillbar">
