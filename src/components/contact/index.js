@@ -32,12 +32,13 @@ function Contact() {
 
             if (response.ok) {
                 alert('Message envoyé avec succès!');
+                setFormData({ name: '', email: '', message: '' });
             } else {
                 alert('Échec de l\'envoi du message.');
             }
         } catch (error) {
             console.error('Erreur:', error);
-            alert('Erreur lors de l\'envoi du message.');
+            alert('Erreur réseau ou serveur.');
         }
     };
 
@@ -46,9 +47,9 @@ function Contact() {
             <h1 className="pagetitle">Contactez moi</h1>
             <span className="contactdesc">Veuillez remplir le formulaire ci-dessous pour discuter de toute opportunité de travail</span>
             <form className="contactform" onSubmit={handleSubmit}>
-                <input type="text" name="name" className="name" placeholder="Votre nom" onChange={handleChange} />
-                <input type="email" name="email" className="email" placeholder="Votre mail" onChange={handleChange} />
-                <textarea name="message" className="message" rows="5" placeholder="Votre message" onChange={handleChange} />
+                <input type="text" name="name" className="name" placeholder="Votre nom" value={formData.name} onChange={handleChange} />
+                <input type="email" name="email" className="email" placeholder="Votre mail" value={formData.email} onChange={handleChange} />
+                <textarea name="message" className="message" rows="5" placeholder="Votre message" value={formData.message} onChange={handleChange} />
                 <button type="submit" className="submitbtn">Envoyer</button>
                 <div className="links">
                     <a href="https://www.linkedin.com/in/make-chen-604151254/"><img src={lkdin} alt="LinkedIn" className="link" /></a>

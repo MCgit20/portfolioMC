@@ -2,17 +2,18 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv').config(); // Charger les variables d'environnement
 
 const app = express();
 const PORT = 3001;
 
-// Permettre le CORS pour les requêtes de votre client React
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+// Configurer CORS pour autoriser les requêtes depuis le client React
+app.use(cors({
+    origin: 'http://localhost:3000', // URL de votre client React
+    methods: ['GET', 'POST'], // Méthodes HTTP autorisées
+    allowedHeaders: ['Content-Type'] // En-têtes autorisés
+}));
 
 // Configurer le middleware pour traiter les données JSON
 app.use(bodyParser.json());
@@ -26,7 +27,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// Route pour traiter l'envoi de formulaire
+// Définir une route pour traiter les envois de formulaire
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
 
@@ -39,8 +40,10 @@ app.post('/send', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return res.status(500).send(error.toString());
+            console.error('Erreur d\'envoi:', error);
+            return res.status(500).send('Erreur lors de l\'envoi de l\'email.');
         }
+        console.log('Email envoyé:', info.response);
         res.status(200).send('Email envoyé avec succès!');
     });
 });
