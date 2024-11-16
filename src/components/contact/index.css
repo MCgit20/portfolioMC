@@ -18,38 +18,56 @@
 
 .contactdesc {
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 .contactform {
-    margin: 1rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90vw;
-    max-width: 60rem;
+    width: 80vw;
+    max-width: 50rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.9);
 }
 
 .name, .email, .message {
-    font-size: medium;
+    font-size: 1.2rem;
     width: 100%;
-    max-width: 40rem;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 0.5rem;
-    background-color: rgb(40, 40, 40);
+    max-width: 45rem;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    color: #efeeee;
+    border: 1px solid rgba(240, 240, 240, 0.3);
+    border-radius: 0.75rem;
+    background-color: rgb(70, 70, 70);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.name:hover, .email:hover, .message:hover {
+    background-color: rgb(60, 60, 60);
+    transform: scale(1.02);
 }
 
 .submitbtn {
-    background: white;
+    background: linear-gradient(to right, #add8e6, #000080, #000033);
+    color: #fff;
+    font-size: 1rem;
     border: none;
-    border-radius: 0.5rem;
-    margin: 2rem;
-    padding: 0.75rem 3.5rem;
+    border-radius: 0.75rem;
+    margin: 2rem 0;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;;
+}
+
+.submitbtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .links {
@@ -59,8 +77,8 @@
 
 .link {
     object-fit: cover;
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
     margin: 0 0.75rem;
 }
 

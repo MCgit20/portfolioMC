@@ -1,7 +1,7 @@
 #intro {
     height: calc(100vh - 4rem);
     width: 100vw;
-    max-width: 75rem;
+    max-width: 100rem;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -10,7 +10,7 @@
 .photo {
     position: absolute;
     top: 2rem;
-    right: 0;
+    right: 1rem;
     z-index: -1;
     object-fit: cover;
     height: 62vh;
@@ -21,17 +21,19 @@
 .introContent {
     height: 100vh;
     width: 100vw;
-    padding: 2rem;
+    padding: -1rem;
     font-size: 3rem;
     font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    transform: translateY(-2rem);
 }
 
 .bonjour {
-    font-size: 1.75rem;
-    font-weight: 100;
+    font-size: 5rem;
+    font-weight: 650;
 }
 
 .prénom {
@@ -39,8 +41,8 @@
 }
 
 .intropara {
-    font-size: medium;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
