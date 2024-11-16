@@ -13,6 +13,8 @@ function App() {
     <Skills></Skills>
     <Works></Works>
     <Contact></Contact>
+    <br></br>
+    <br></br>
     <Footer></Footer>
     </div>
   );
