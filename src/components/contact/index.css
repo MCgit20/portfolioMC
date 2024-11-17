@@ -73,6 +73,10 @@
     transform: scale(1.02);
 }
 
+.message {
+    height: 16.5rem;
+}
+
 .submitbtn {
     background: linear-gradient(to right, #add8e6, #000080, #000033);
     color: #fff;
