@@ -44,29 +44,53 @@
 }
 
 .skillbars {
-    margin: 1.5rem;
+    margin: 2rem auto;
     width: 100vw;
-    max-width: 80%;
+    max-width: 90%;
     text-align: left;
+    font-family: 'Popping', sans-serif;
 }
 
 .skillbar {
     display: flex;
-    margin: 1rem;
-    padding: 1.5rem 2rem;
-    border-radius: 0.5rem;
-    background: rgb(48, 54, 58);
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(135deg, #1e1f29, #3a3f47);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skillbar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
 }
 
 .barimg {
-    margin-right: 0.5rem;
-    background: none;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bartext > h2 {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    margin-bottom: 0.5rem;
 }
 
 .bartext>p {
-    font-size: 1.1rem;
-    font-weight: 300;
-
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    font-weight: 520;
+    line-height: 1.5;
 }
 
 @media screen and (max-width:720px) {
